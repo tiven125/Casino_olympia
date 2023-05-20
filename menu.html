@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -17,19 +17,30 @@
 
         }
 
-
         .contenedor {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
             width: 100%;
             height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(3, 1fr);
         }
 
-        button {
+        .contenedor .item {
+            grid-column: 3/6;
+        }
+
+        .contenedor .item1 {
+            grid-column: 2/3;
+        }
+
+        .contenedor .item4 {
+            grid-column: 2/3;
+        }
+
+        .contenedor button {
             background: rebeccapurple;
             border-radius: 10px;
-            width: 300px;
+            width: 200px;
             height: 150px;
             display: flex;
             align-items: center;
@@ -46,66 +57,116 @@
             background: #92990e;
         }
     </style>
-    <title>Document</title>
+    <title>Menu</title>
 </head>
 
 <body>
 
     <section class="contenedor">
-        <!-- <button onclick="abrirNuevaPagina()">
-            <h1>Finalistas</h1>
-        </button>
-        <button>
-            <h1>Ganadores</h1>
-        </button> -->
-        <button onclick="Reiniciar()" id=" btn_reiniciar">
-            <h1>Reiniciar</h1>
-        </button>
 
+        <div class="contenedor_imagen item">
+            <img src="image/logo.png" alt="">
+        </div>
 
+        <div class="item1">
 
+            <button onclick="abrirNuevaPagina()">
+                <h1>Finalistas</h1>
+            </button>
+        </div>
 
+        <div class="item2">
 
-    </section>
-    <script src="https://kit.fontawesome.com/9a94afc609.js" crossorigin="anonymous"></script>
+            <button onclick="abrirganadores()">
+                <h1>Ganadores</h1>
+            </button>
+        </div>
 
-    <script>// Reiniciar localStorage
+        <div class="item3">
+            <button onclick="abrirRuleta()">
+                <h1>Generar Ganador</h1>
+            </button>
+        </div>
+        <div class="item4">
 
+            <button onclick="abrirNuevaPaginaTurnos()">
+                <h1>Turnos</h1>
+            </button>
+        </div>
+        <div class="item5">
+            <button onclick="abrirRuleta()">
+                <h1>Ruleta</h1>
+            </button>
+        </div>
 
+        <div class="item6">
+            <button onclick="Reiniciar()" id=" btn_reiniciar">
+                <h1>Reiniciar</h1>
+            </button>
 
+        </div>
 
+        <script src="https://kit.fontawesome.com/9a94afc609.js" crossorigin="anonymous"></script>
 
-        function Reiniciar() {
-            if (confirm("¿Estás seguro de realizar esta acción?")) {
-                alert("Datos Eliminados")
-                localStorage.removeItem("intentos20");
-                localStorage.removeItem("intentos30");
-                localStorage.removeItem("intentos40");
-                localStorage.removeItem("intentos100");
-                localStorage.removeItem("Finalistas");
-                localStorage.removeItem("turnos")
-                localStorage.removeItem("intentosRaspa")
-            } else {
-                alert("El usuario ha cancelado")
+        <script>// Reiniciar localStorage
+
+            function Reiniciar() {
+                if (confirm("¿Estás seguro de realizar esta acción?")) {
+                    alert("Datos Eliminados")
+                    localStorage.removeItem("intentos20");
+                    localStorage.removeItem("intentos30");
+                    localStorage.removeItem("intentos40");
+                    localStorage.removeItem("intentos100");
+                    localStorage.removeItem("Finalistas");
+                    localStorage.removeItem("turnos")
+                    localStorage.removeItem("intentosRaspa")
+                } else {
+                    alert("El usuario ha cancelado")
+                }
             }
 
 
-        }
+
+            function abrirNuevaPagina() {
+                // URL de la página que deseas abrir
+                var url = "../RuletaCasino/finalista.html";
+
+                // Abre la página en una nueva pestaña o ventana
+                window.open(url, "_blank");
+            }
+
+            function abrirNuevaPaginaTurnos() {
+                // URL de la página que deseas abrir
+                var url = "../RuletaCasino/turnos.html";
+
+                // Abre la página en una nueva pestaña o ventana
+                window.open(url);
+            }
+            function abrirRuleta() {
+                // URL de la página que deseas abrir
+                var url = "../RuletaCasino/index.html";
+
+                // Abre la página en una nueva pestaña o ventana
+                window.open(url);
+            }
+            function generarGanador() {
+                // URL de la página que deseas abrir
+                var url = "../RuletaCasino/generarGanador.html";
+
+                // Abre la página en una nueva pestaña o ventana
+                window.open(url);
+            }
+
+            function abrirganadores() {
+                // URL de la página que deseas abrir
+                var url = "../RuletaCasino/Ganadores.html";
+
+                // Abre la página en una nueva pestaña o ventana
+                window.open(url, "_blank");
+            }
 
 
-
-        function abrirNuevaPagina() {
-            // URL de la página que deseas abrir
-            var url = "../RuletaCasino/finalista.html";
-
-            // Abre la página en una nueva pestaña o ventana
-            window.open(url, "_blank");
-        }
-
-
-
-
-    </script>
+        </script>
 
 
 

@@ -6,8 +6,6 @@ document.addEventListener("keydown", function (e) {
   }
 });
 
-giros = 0;
-
 function reproducirAudio() {
   var audio = document.getElementById("miAudio");
   audio.play();
@@ -175,7 +173,7 @@ function girar() {
             SigueIntentando();
           }
           break;
-        case valor > 10 && valor <= 11: //  Ganaste intentos100
+        case valor > 10 && valor <= 12: //  Ganaste intentos100
           // Obtener el valor actual almacenado en localStorage (si existe)
           var valorActual = localStorage.getItem("intentos100");
           // Verificar si el valor existe y convertirlo a número
@@ -185,13 +183,14 @@ function girar() {
           if (nuevoNumero <= 2) {
             reproducirAudio();
             ganaste100();
+
             localStorage.setItem("intentos100", nuevoNumero);
           } else {
             reproducirAudio();
             SigueIntentando();
           }
           break;
-        case valor > 11 && valor <= 15: //  Ganaste intentos40
+        case valor > 12 && valor <= 15: //  Ganaste intentos40
           // Obtener el valor actual almacenado en localStorage (si existe)
           var valorActual = localStorage.getItem("intentos40");
           // Verificar si el valor existe y convertirlo a número
@@ -207,7 +206,7 @@ function girar() {
             SigueIntentando();
           }
           break;
-        case valor > 15 && valor <= 18: //  Ganaste intentos30
+        case valor > 15 && valor <= 20: //  Ganaste intentos30
           // Obtener el valor actual almacenado en localStorage (si existe)
           var valorActual = localStorage.getItem("intentos30");
           // Verificar si el valor existe y convertirlo a número
@@ -225,7 +224,7 @@ function girar() {
             SigueIntentando();
           }
           break;
-        case valor > 18 && valor <= 23: // Ganaste intentos 20
+        case valor > 20 && valor <= 23: // Ganaste intentos 20
           // Obtener el valor actual almacenado en localStorage (si existe)
           var valorActual = localStorage.getItem("intentos20");
           // Verificar si el valor existe y convertirlo a número
@@ -246,7 +245,7 @@ function girar() {
             SigueIntentando();
           }
           break;
-        case valor > 23 && valor <= 55: // Ganaste Raspa
+        case valor > 23 && valor <= 60: // Ganaste Raspa
           // Obtener el valor actual almacenado en localStorage (si existe)
           var valorActual = localStorage.getItem("intentosRaspa");
           // Verificar si el valor existe y convertirlo a número
@@ -278,3 +277,33 @@ function girar() {
     }, 5000);
   }
 }
+
+// Formulario Turnos
+
+// Finalistas
+const finalista = document.querySelector(`.finalista`);
+finalista.innerHTML = localStorage.getItem("Finalistas");
+
+// Turnos
+const forTurno = document.querySelector(`.forTurno`);
+forTurno.innerHTML = localStorage.getItem("turnos");
+
+// intentosRaspa
+const forRaspa = document.querySelector(`.forRaspa`);
+forRaspa.innerHTML = localStorage.getItem("intentosRaspa");
+
+// intentos100
+const for100 = document.querySelector(`.for100`);
+for100.innerHTML = localStorage.getItem("intentos100");
+
+// intentos40
+const for40 = document.querySelector(`.for40`);
+for40.innerHTML = localStorage.getItem("intentos40");
+
+// intentos30
+const for30 = document.querySelector(`.for30`);
+for30.innerHTML = localStorage.getItem("intentos30");
+
+// intentos20
+const for20 = document.querySelector(`.for20`);
+for20.innerHTML = localStorage.getItem("intentos20");
