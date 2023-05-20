@@ -29,7 +29,7 @@
     <main class="main-content">
         <div class="crud-container">
             <div class="crud-header">
-                <h1>Finalistas Registrados</h1>
+                <h1 onclick="delFinalista()">Finalistas Registrados</h1>
                 <button id="openRegistroModal" class="button is-success">
                     <i class="fa-solid fa-plus"></i>
                     <span>Nuevo Finalista</span>
@@ -45,16 +45,6 @@
                     </tr>
                 </thead>
 
-                <tbody>
-                    <td>1</td>
-                    <td>Steven</td>
-                    <td>1054995771</td>
-                    <td>3146425955</td>
-                    <td> <button class="button is-warning is-light"><i class="fa-solid fa-pencil"></i></button>
-                        <button class="button is-danger is-light"><i class="fa-solid fa-trash"></i></button>
-
-                    </td>
-                </tbody>
             </table>
         </div>
     </main>
@@ -116,10 +106,9 @@
 
         </div>
     </div>
+
+    <script src="https://kit.fontawesome.com/9a94afc609.js" crossorigin="anonymous"></script>
+    <script type="module" src="js/formulario.js"></script>
 </body>
-<script src="https://kit.fontawesome.com/9a94afc609.js" crossorigin="anonymous"></script>
-<script type="module" src="js/formulario.js"></script>
-
-
 
 </html>

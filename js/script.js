@@ -270,6 +270,8 @@ function girar() {
 
           break;
         case valor > 220 && valor <= 360: // Sigue intentando
+          alert("aaaa");
+
           reproducirAudio();
           SigueIntentando();
           break;
@@ -281,29 +283,43 @@ function girar() {
 // Formulario Turnos
 
 // Finalistas
-const finalista = document.querySelector(`.finalista`);
-finalista.innerHTML = localStorage.getItem("Finalistas");
+const finalistaElement = document.querySelector(`.finalista`);
+finalistaElement
+  ? (finalistaElement.innerHTML = localStorage.getItem("Finalistas") || "")
+  : undefined;
 
 // Turnos
-const forTurno = document.querySelector(`.forTurno`);
-forTurno.innerHTML = localStorage.getItem("turnos");
+const forTurnoElement = document.querySelector(`.forTurno`);
+forTurnoElement
+  ? (forTurnoElement.innerHTML = localStorage.getItem("turnos") || "")
+  : undefined;
 
 // intentosRaspa
-const forRaspa = document.querySelector(`.forRaspa`);
-forRaspa.innerHTML = localStorage.getItem("intentosRaspa");
+const forRaspaElement = document.querySelector(`.forRaspa`);
+forRaspaElement
+  ? (forRaspaElement.innerHTML = localStorage.getItem("intentosRaspa") || "")
+  : undefined;
 
 // intentos100
-const for100 = document.querySelector(`.for100`);
-for100.innerHTML = localStorage.getItem("intentos100");
+const for100Element = document.querySelector(`.for100`);
+for100Element
+  ? (for100Element.innerHTML = localStorage.getItem("intentos100") || "")
+  : undefined;
 
 // intentos40
-const for40 = document.querySelector(`.for40`);
-for40.innerHTML = localStorage.getItem("intentos40");
+const for40Element = document.querySelector(`.for40`);
+for40Element
+  ? (for40Element.innerHTML = localStorage.getItem("intentos40") || "")
+  : undefined;
 
 // intentos30
-const for30 = document.querySelector(`.for30`);
-for30.innerHTML = localStorage.getItem("intentos30");
+const for30Element = document.querySelector(`.for30`);
+for30Element
+  ? (for30Element.innerHTML = localStorage.getItem("intentos30") || "")
+  : undefined;
 
 // intentos20
-const for20 = document.querySelector(`.for20`);
-for20.innerHTML = localStorage.getItem("intentos20");
+const for20Element = document.querySelector(`.for20`);
+for20Element
+  ? (for20Element.innerHTML = localStorage.getItem("intentos20") || "")
+  : undefined;
