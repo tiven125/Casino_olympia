@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/formulario.css">
+    <link rel="stylesheet" href="sweetalert2.min.css">
+
 
     <title>Finalistas</title>
 </head>
@@ -29,7 +31,7 @@
     <main class="main-content">
         <div class="crud-container">
             <div class="crud-header">
-                <h1 onclick="delFinalista()">Finalistas Registrados</h1>
+                <h1>Finalistas Registrados</h1>
                 <button id="openRegistroModal" class="button is-success">
                     <i class="fa-solid fa-plus"></i>
                     <span>Nuevo Finalista</span>
@@ -74,7 +76,7 @@
                     <div class="field">
                         <label class="label">Cedula</label>
                         <div class="control has-icons-left">
-                            <input class="input is-success" type="number" placeholder="Ingrese Correo" name="cedula">
+                            <input class="input is-success" type="number" placeholder="Ingrese Cedula" name="cedula">
                             <span class="icon is-small is-left">
                                 <i class="fa-solid fa-closed-captioning"></i>
 
@@ -85,7 +87,8 @@
                     <div class="field">
                         <label class="label">Telefono</label>
                         <div class="control has-icons-left">
-                            <input name="telefono" class="input is-success" type="number" placeholder="Ingrese Correo">
+                            <input name="telefono" class="input is-success" type="number"
+                                placeholder="Ingrese Telefono">
                             <span class="icon is-small is-left">
                                 <i class="fa-duotone fa-mobile-button"></i>
                             </span>
@@ -106,6 +109,7 @@
 
         </div>
     </div>
+
 
     <script src="https://kit.fontawesome.com/9a94afc609.js" crossorigin="anonymous"></script>
     <script type="module" src="js/formulario.js"></script>

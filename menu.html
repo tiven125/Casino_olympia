@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="image/logo.png" type="image/x-icon">
+
     <style>
         @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
 
@@ -26,7 +28,7 @@
         }
 
         .contenedor .item {
-            grid-column: 3/6;
+            grid-column: 3/5;
         }
 
         .contenedor .item1 {
@@ -69,37 +71,34 @@
         </div>
 
         <div class="item1">
+            <button onclick="abrirRuleta()">
+                <h1>Ruleta</h1>
+            </button>
 
+        </div>
+
+
+        <div class="item2">
             <button onclick="abrirNuevaPagina()">
                 <h1>Finalistas</h1>
             </button>
         </div>
 
-        <div class="item2">
-
-            <button onclick="abrirganadores()">
-                <h1>Ganadores</h1>
-            </button>
-        </div>
-
         <div class="item3">
-            <button onclick="abrirRuleta()">
+
+            <button onclick="generarGanador()">
                 <h1>Generar Ganador</h1>
             </button>
         </div>
         <div class="item4">
 
+
             <button onclick="abrirNuevaPaginaTurnos()">
                 <h1>Turnos</h1>
             </button>
         </div>
-        <div class="item5">
-            <button onclick="abrirRuleta()">
-                <h1>Ruleta</h1>
-            </button>
-        </div>
 
-        <div class="item6">
+        <div class="item5">
             <button onclick="Reiniciar()" id=" btn_reiniciar">
                 <h1>Reiniciar</h1>
             </button>
@@ -120,6 +119,8 @@
                     localStorage.removeItem("Finalistas");
                     localStorage.removeItem("turnos")
                     localStorage.removeItem("intentosRaspa")
+                    localStorage.removeItem("usersFinalistas")
+
                 } else {
                     alert("El usuario ha cancelado")
                 }
@@ -157,13 +158,7 @@
                 window.open(url);
             }
 
-            function abrirganadores() {
-                // URL de la página que deseas abrir
-                var url = "../RuletaCasino/Ganadores.html";
 
-                // Abre la página en una nueva pestaña o ventana
-                window.open(url, "_blank");
-            }
 
 
         </script>

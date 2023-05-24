@@ -214,3 +214,41 @@ img {
     filter: drop-shadow(10px 10px 10px gold);
   }
 }
+
+.contador {
+  margin-bottom: 25px;
+}
+
+/* CSS De las alertas */
+
+.tituloAlerta {
+  font-size: 40px;
+  animation-name: anim;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  color: #716add;
+}
+
+.finalistasUsuaros {
+  margin-bottom: 20px;
+  column-count: 2;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 2px;
+}
+
+.tituloFinalista {
+  color: gold;
+  margin-bottom: 25px;
+}
+
+.nombreGanador {
+  font-size: 50px;
+  color: green;
+}
+
+.ctoFormulario {
+  font-size: 30px;
+  color: green;
+  cursor: pointer;
+}

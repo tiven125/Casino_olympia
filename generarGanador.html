@@ -4,9 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Casino olympia</title>
+  <title>Casino olympia-Generar Ganador</title>
   <link rel="stylesheet" href="css/estilo.css">
   <link rel="shortcut icon" href="image/logo.png" type="image/x-icon">
+
+  <style>
+    body {
+      background-image: linear-gradient(180deg, #56711857 0%, #0e12d441 100%),
+        url(../RuletaCasino/image/FondoDos.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      width: 100%;
+      height: 100vh;
+    }
+  </style>
 </head>
 
 <body>
@@ -15,21 +27,11 @@
     <div>
       <img class="logo_olympia" src="image/logo.png" alt="">
     </div>
-    <h1 class="ml3 ">Giro Millonario.</h1>
+    <h1 class="ml3 ">Giro Ganador.</h1>
   </header>
 
 
-  <section id="premio">
 
-    <table style=" margin: 0 auto;">
-      <tr>
-        <td>
-          <p class="contador">TURNOS: 0</p>
-        </td>
-      </tr>
-    </table>
-
-  </section>
 
   <div class="vara">
     <img class="arrow" src="image/flecha-correcta.png" alt="">
@@ -49,7 +51,6 @@
     </audio>
   </div>
 
-  <!-- <button class="btn__girar " id="btn_girar">Girar</button> -->
 
 
 
@@ -65,6 +66,7 @@
 
 
   <script src=" js/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script src="js/generarGanador.js"></script>
 </body>

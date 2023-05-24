@@ -41,9 +41,12 @@ function girar() {
       padding: "3em",
       imageAlt: "A tall image",
       backdrop: `
-        rgba(0,0,123,0.4)      
+      #ffd00020     
       `,
       confirmButtonText: "Aceptar",
+      customClass: {
+        title: "tituloAlerta",
+      },
     });
   };
 
@@ -51,17 +54,20 @@ function girar() {
     Swal.fire({
       confirmButton: "btn btn-success",
       title: `Felicitaciones Eres finalista`,
-      // html: `
-      // <a href="../finalista.html">Llenar Formulario</a>
-      // `,
+      html: `
+      <a class="ctoFormulario" href="../RuletaCasino/finalista.html">Llenar Formulario</a>
+      `,
       confirmButtonText: "Cerrar",
       imageUrl: `https://i.pinimg.com/originals/8f/d4/29/8fd429e6f62ec2bb69e16314f81a2cc4.gif`,
       imageHeight: 600,
       padding: "3em",
       imageAlt: "A tall image",
       backdrop: `
-          rgba(0,0,123,0.4)
+      #ffd00020     
         `,
+      customClass: {
+        title: "tituloAlerta",
+      },
     });
   };
 
@@ -75,9 +81,12 @@ function girar() {
       padding: "3em",
       imageAlt: "A tall image",
       backdrop: `
-        rgba(0,0,123,0.4)      
+      #ffd00020     
       `,
       confirmButtonText: "Aceptar",
+      customClass: {
+        title: "tituloAlerta",
+      },
     });
   };
 
@@ -91,9 +100,12 @@ function girar() {
       padding: "3em",
       imageAlt: "A tall image",
       backdrop: `
-        rgba(0,0,123,0.4)      
+      #ffd00020     
       `,
       confirmButtonText: "Aceptar",
+      customClass: {
+        title: "tituloAlerta",
+      },
     });
   };
 
@@ -107,11 +119,15 @@ function girar() {
       padding: "3em",
       imageAlt: "A tall image",
       backdrop: `
-        rgba(0,0,123,0.4)      
+      #ffd00020     
       `,
       confirmButtonText: "Aceptar",
+      customClass: {
+        title: "tituloAlerta",
+      },
     });
   };
+
   ganaste40 = () => {
     Swal.fire({
       title: `Felicidades Ganaste 40.000`,
@@ -122,11 +138,15 @@ function girar() {
       padding: "3em",
       imageAlt: "A tall image",
       backdrop: `
-        rgba(0,0,123,0.4)      
+      #ffd00020     
       `,
       confirmButtonText: "Aceptar",
+      customClass: {
+        title: "tituloAlerta",
+      },
     });
   };
+
   ganaste100 = () => {
     Swal.fire({
       title: `Felicidades Ganaste 100.000`,
@@ -137,9 +157,12 @@ function girar() {
       padding: "3em",
       imageAlt: "A tall image",
       backdrop: `
-        rgba(0,0,123,0.4)      
+      #ffd00020     
       `,
       confirmButtonText: "Aceptar",
+      customClass: {
+        title: "tituloAlerta",
+      },
     });
   };
 
@@ -270,8 +293,6 @@ function girar() {
 
           break;
         case valor > 220 && valor <= 360: // Sigue intentando
-          alert("aaaa");
-
           reproducirAudio();
           SigueIntentando();
           break;
@@ -323,3 +344,22 @@ const for20Element = document.querySelector(`.for20`);
 for20Element
   ? (for20Element.innerHTML = localStorage.getItem("intentos20") || "")
   : undefined;
+// mostar Datos del local Storage
+
+// Paso 1: Obtener los datos del localStorage
+var datosLocalStorage = localStorage.getItem("usersFinalistas");
+
+// Paso 2: Parsear los datos a un objeto JavaScript
+var datos = JSON.parse(datosLocalStorage);
+// Paso 3: Crear una tabla en el documento HTML
+const contenedor = document.querySelector(".usuariosFinalistas");
+
+// Iterar sobre el arreglo de objetos y crear elementos HTML para cada objeto
+datos.forEach(function (objeto, index) {
+  var elemento = document.createElement("tbody");
+  elemento.innerHTML = `
+  <td>${index + 1}</td>
+  <td>${objeto.nombre}</td>
+  `;
+  contenedor.appendChild(elemento);
+});
